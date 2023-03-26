@@ -1,17 +1,35 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
-.container{
-   display: flex;
-   
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-aside{
-    background: #000;
-    min-height: 100vh;
-    width: 22%;
+.brand {
+  color: white;
 }
-main{
-    background: lightblue;
-    min-height: 100vh;
-    width: 78%;
+.register {
+  margin-right: 40px;
+}
+.register a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.container {
+  display: flex;
+}
+aside {
+  background: #1d1d1d;
+  min-height: 100vh;
+  width: 22%;
+}
+main {
+  background: lightblue;
+  min-height: 100vh;
+  width: 78%;
 }
