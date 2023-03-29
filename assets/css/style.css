@@ -3,6 +3,8 @@ body {
 }
 a{
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif; 
+
 }
 header {
   display: flex;
@@ -42,4 +44,15 @@ main {
   background: lightblue;
   min-height: 100vh;
   width: 82%;
+}
+
+.item {
+  flex-grow: 1; 
+  padding-top: 25px; 
+  padding-left: 15px; 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+ul {
+  list-style-type: none;
 }

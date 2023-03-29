@@ -7,7 +7,7 @@
     <title>gameX</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body onload="onLoad()">
     <header>
         <img width="100"  src="assets/images/gameX-logo.jpg" alt="">
         <h2 class="brand">gameX</h2>
@@ -22,12 +22,20 @@
          <h3>Dashboard</h3>
          <nav>
             <a href="#">Home</a>
-            <a href="#">Game List</a>
+            <a href="#">Change Theme</a>
          </nav>
     </aside>
-    <main>
-        
+    <main class="container">
+        <div class="item"><h2>Games</h2>
+            <div id="gamesList"></div>    
+        </div>
+        <div class="item"><h2>Stats</h2>
+            <div id="statsList"></div>
+            <div id="generalStatsList"></div>   
+            <div id="gameSpecificStatsList"></div>     
+        </div>
     </main>
    </div>
+   <script src="script.js"></script>
 </body>
 </html>
