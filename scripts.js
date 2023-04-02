@@ -42,7 +42,6 @@ function printGameSpecificStats() {
     for (let i = 0; i < games.length; i++) {
         gameSpecificStatsListHTML += "<h4>" + games[i].name + "</h4><ul>"; 
         gameSpecificStatsListHTML += "<li> Total time played: " + games[i].totalTimePlayed + "</li>";
-        gameSpecificStatsListHTML += "<li> Number of times played: " + games[i].numberOfTimesPlayed + "</li>";
         gameSpecificStatsListHTML += "<li> Average score: " + games[i].avgScore + "</li>";
         gameSpecificStatsListHTML += "<li> Highest score: " + games[i].highestScore + "</li>";
         gameSpecificStatsListHTML += "<li> Ranking: " + games[i].ranking + "</li>";
@@ -56,7 +55,6 @@ class Game {
     constructor(name) {
         this.name = name;
         this.totalTimePlayed = 0; 
-        this.numberOfTimesPlayed = 0; 
         this.avgScore = 0; 
         this.highestScore = 0;  
         this.ranking = 0; 
@@ -67,13 +65,6 @@ setTotalTimePlayed(time) {
         throw 'Time cannot be negative';
     }
     this.totalTimePlayed = time; 
-}
-    
-setNumberOfTimesPlayed(num) {
-    if (num < 0) {
-        throw 'Time cannot be negative';
-    }
-    this.numberOfTimesPlayed = num; 
 }
 
 setAvgScore(avgScore) {
