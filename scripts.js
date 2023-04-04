@@ -1,4 +1,8 @@
-const gameNames = ["Asteroid", "Packman", "Space Invaders", "Tetris"]
+const gameNames = ["<a href='asteroid.html'>Asteroid</a>",
+                   "<a href='packman.html'>Packman</a>",
+                   "<a href='spaceinvaders.html'>Space Invaders</a>",
+                   "<a href='tetris.html'>Tetris</a>"
+                  ]
 const generalStats = ["Total time"]
 var games = []; 
 
@@ -11,7 +15,7 @@ function onLoad() {
 
 function initializeGames() {
     for (let i = 0; i < gameNames.length; i++) {
-         var game = new Game(gameNames[i])
+         var game = new Game(gameNames[i]);
          games[i] = game; 
     }
 }
@@ -23,7 +27,7 @@ function printGames() {
         gamesListHTML += "<li>" + games[i].name + "</li>"; 
     }
     gamesListHTML +="</ul>";
-    gamestList.innerHTML = gamesListHTML; 
+    gamestList.innerHTML = gamesListHTML;
 } 
 
 function printGeneralStats() {
