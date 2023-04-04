@@ -11,7 +11,7 @@ function onLoad() {
 
 function initializeGames() {
     for (let i = 0; i < gameNames.length; i++) {
-         var game = new Game(gameNames[i])
+         var game = new Game(gameNames[i]);
          games[i] = game; 
     }
 }
