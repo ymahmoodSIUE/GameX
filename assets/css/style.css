@@ -56,3 +56,56 @@ main {
 ul {
   list-style-type: none;
 }
+.form-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightblue;
+}
+.form-container h2{
+  text-align:  center;
+  margin-bottom: 50px;
+}
+.form-style ul{
+  list-style: disc;
+}
+.form-style{
+  background-color: white;
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 40px;
+}
+.form-style label{
+  display:block;
+  margin-bottom: 12px;
+}
+.form-style .form-group{
+  margin: 40px 0;
+  text-align: center;
+}
+.form-style input{
+  width: 250px;
+  padding: 7px 15px;
+}
+.form-style button{
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 7px;
+  display: block;
+  border: none;
+  width: 60%;
+  margin: auto;
+}
+.error{
+  color: red;
+}
+.success{
+  color: green;
+}
+.send-email{
+  background-color: white;
+  width: 40%;
+  padding: 40px;
+}
