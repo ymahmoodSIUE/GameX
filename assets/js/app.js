@@ -98,6 +98,31 @@ function checkEmail(e) {
 
 function resetPassword(e) {
     e.preventDefault();
+    const newPassword= document.querySelector(".new-password").value;
+    const rePassword= document.querySelector(".re-password").value;
+
+    if (newPassword!==rePassword) {
+        document.querySelector(".re-password-error").innerText="Passwords do not match!";
+        return;
+    }else{
+        document.querySelector(".re-password-error").innerText="";
+    }
+    const userController= new UserController(milad);
+    userController.changePassword(newPassword);
+
+    document.querySelector(".form-container").innerHTML=`
+    <div class="send-email">
+         <h1 class="success">
+            Your Password changed successfully.
+         </h1>
+         <a href="index.html">Back To Dashboard</a>
+     </div>
+    `
+
+}
+
+function changePassword(e) {
+    e.preventDefault();
     const oldPassword= document.querySelector(".old-password").value;
     const newPassword= document.querySelector(".new-password").value;
     const rePassword= document.querySelector(".re-password").value;
@@ -138,4 +163,8 @@ if (forgotPasswordForm) {
 const resetPasswordForm=document.querySelector(".reset-password-form")
 if (resetPasswordForm) {
     resetPasswordForm.addEventListener("submit",resetPassword)
+}
+const changePasswordForm=document.querySelector(".change-password-form")
+if (changePasswordForm) {
+    changePasswordForm.addEventListener("submit",changePassword)
 }
