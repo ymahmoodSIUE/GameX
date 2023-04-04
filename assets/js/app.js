@@ -1,18 +1,82 @@
-function sendEmail(email) {
+
+
+//model
+class User{
+    #name;
+    #username;
+    #password;
+    #email;
+    constructor(name, username, password, email){
+      this.#name=name;
+      this.#username=username;
+      this.#password=password;
+      this.#email=email;
+    }
+    getName=()=> this.#name;
+    getUsername=()=> this.#username;
+    getPassword=()=> this.#password;
+    getEmail=()=> this.#email;
+    setPassword=(newPassword)=>this.#password=newPassword
+
+}
+const admin= new User("admin", "admin", "admin", "admin@gamex.com")
+const milad= new User("milad", "milad2023", "1234", "milad@gamex.com")
+let users= [
+    admin,
+    milad,
+]
+
+//controllor
+class UserController{
+
+    constructor(user){
+       this.user=user;
+    }
 
     // check if the email is valid?
-    if(email=== "admin@gamex.com"){
-        console.log("Email send!");
-        return true;
+    checkValidEmail(email){
+        const result= users.find((user)=>user.getEmail()===email)
+        if (result) {
+            return true;
+        }
+        return false;
     }
-    return false;
+
+    sendEmail(email, message) {
+        console.log("Email send! to:"+email, "Message: "+ message);
+    }
+
+    checkOldPassword(password) {
+        // check if the password is valid?
+        if(this.user.getPassword()===password){
+            return true;
+        }
+        return false;
+    }
+
+    changePassword(password) {
+        const user= users.find((user)=>user.getUsername()===this.user.getUsername())
+        if (user) {
+            user.setPassword(password)
+            const newUsers= users.filter((user)=>user.getUsername()!==this.user.getUsername())
+            users=[...newUsers, user]
+            console.log(users);
+            return true;
+        }
+        return false;
+    }
+
+
 }
+
+
 
 function checkEmail(e) {
     e.preventDefault();
     //get value email input
     const email= document.querySelector(".email").value 
-    const result= sendEmail(email);//result is a value that backend returns
+    const userController=new UserController(null)
+    const result= userController.checkValidEmail(email);//result is a value that backend returns
     if (!result) {
         document.querySelector(".error").innerText="Email is not correct!";
     } else {
@@ -24,18 +88,13 @@ function checkEmail(e) {
             <a href="reset-password.html">click here to reset password</a>
         </div>
        `
+       userController.sendEmail(email,'<a href="reset-password.html">click here to reset password</a>')
     }
     
 }
 
 
-function checkOldPassword(password) {
-    // check if the password is valid?
-    if(password === "admin"){
-        return true;
-    }
-    return false;
-}
+
 
 function resetPassword(e) {
     e.preventDefault();
@@ -43,8 +102,9 @@ function resetPassword(e) {
     const newPassword= document.querySelector(".new-password").value;
     const rePassword= document.querySelector(".re-password").value;
 
+    const userController= new UserController(milad)
     //result is a value that backend returns
-    const result= checkOldPassword(oldPassword);
+    const result= userController.checkOldPassword(oldPassword);
     if (!result) {
         document.querySelector(".old-password-error").innerText="Old password is not correct!";
         return;
@@ -59,6 +119,7 @@ function resetPassword(e) {
         document.querySelector(".old-password-error").innerText="";
     }
 
+    userController.changePassword(newPassword);
     document.querySelector(".form-container").innerHTML=`
     <div class="send-email">
          <h1 class="success">
