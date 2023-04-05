@@ -1,11 +1,7 @@
 const gameNames = ["<a href='asteroid.html'>Asteroid</a>",
-                   "<a href='chess.html'>Tetris</a>"
-                    "<a href='checkers.html'>Tetris</a>"
                    "<a href='packman.html'>Packman</a>",
                    "<a href='spaceinvaders.html'>Space Invaders</a>",
                    "<a href='tetris.html'>Tetris</a>"
-                   "<a href='snake.html'>Tetris</a>"
-
                   ]
 const generalStats = ["Total time"]
 var games = []; 
