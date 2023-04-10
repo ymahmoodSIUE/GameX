@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ads Request Form</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form class="ads-request-form form-style" >
+            <h2>Ads Request Form</h2>
+            
+            <div class="form-group">
+                <label for="">Company Name:</label>
+                <input class="company-name" type="text" name="company-name" required> 
+                <div class="error company-name-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="">Company Email:</label>
+                <input class="company-email" type="text" name="company-email" required> 
+                <div class="error company-email-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="">Company Phone Number:</label>
+                <input class="company-phone-number" type="text" name="company-phone-number" required> 
+                <div class="error company-phone-number-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="">Ads Cost:</label>
+                <select class="ads-cost" type="text" name="ads-cost" > 
+                    <option value="0" selected disabled>Select a option</option>
+                    <option value="">1 Month - 20$</option>
+                    <option value="">3 Month - 50$</option>
+                    <option value="">6 Month - 90$</option>
+                    <option value="">12 Month - 160$</option>
+                </select>
+                <div class="error company-email-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="">Start Date:</label>
+                <input class="start-date" type="date" name="start-date" required> 
+                <div class="error start-date-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="">Banner:</label>
+                <input class="banner" type="file" name="banner" required> 
+                <div class="error banner-error"></div>
+            </div>
+
+           
+
+            <button type="submit" class="ads-register">Submit</button>
+
+        </form>
+
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
