@@ -1,15 +1,21 @@
+:root {
+  --background-color: #ADD8E6;
+  --border-color: #000000; 
+  --text-color: #000000;
+}
+
 body {
   margin: 0;
 }
 a{
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif; 
-
+  color: var(--border-color);
 }
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #000;
+  background-color: var(--border-color);
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
@@ -29,7 +35,7 @@ header {
   display: flex;
 }
 aside {
-  background: #1d1d1d;
+  background: var(--border-color);
   min-height: 100vh;
   width: 18%;
   color: white;
@@ -41,7 +47,7 @@ nav a{
   padding: 10px;
 }
 main {
-  background: lightblue;
+  background: var(--background-color);
   min-height: 100vh;
   width: 82%;
 }
@@ -51,6 +57,7 @@ main {
   padding-top: 25px; 
   padding-left: 15px; 
   font-family: Arial, Helvetica, sans-serif; 
+  color: var(--text-color);
 }
 
 ul {
@@ -109,3 +116,46 @@ padding: 40px;
   width: 40%;
   padding: 40px;
 }
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: var(--border-color);;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--border-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: var(--background-color);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: var(--border-color);}

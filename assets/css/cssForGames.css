@@ -1,0 +1,92 @@
+body {
+    background-color: black;
+  }
+
+img.gameImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.tooltip-container {
+    position: relative;
+    display: flex;
+    place-content: center;
+}
+
+/* styling of the tooltip display */
+p#tooltip-text {
+    display: none;
+    position: absolute;
+    top: -60px;
+    z-index: 1;
+    background: black;
+    padding: 8px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 2px;
+    animation: fadeIn 0.6s;
+}
+
+/* optional styling to add a "wedge" to the tooltip */
+p#tooltip-text:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border: 8px solid transparent;
+  border-top: 8px solid grey;
+}
+
+@keyframes fadeIn {
+ from {
+   opacity: 0;
+ }
+ to {
+   opacity: 1;
+ }
+
+ .tooltip-container {
+    position: relative;
+    display: flex;
+    place-content: center;
+}
+
+/* styling of the tooltip display */
+p#tooltip-text {
+    display: none;
+    position: absolute;
+    top: -60px;
+    z-index: 1;
+    background: grey;
+    padding: 8px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 2px;
+    animation: fadeIn 0.6s;
+}
+
+/* optional styling to add a "wedge" to the tooltip */
+p#tooltip-text:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border: 8px solid transparent;
+  border-top: 8px solid grey;
+}
+
+@keyframes fadeIn {
+ from {
+   opacity: 0;
+ }
+ to {
+   opacity: 1;
+ }
+}
+
+
+
