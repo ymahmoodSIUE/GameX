@@ -10,7 +10,7 @@
 </head>
 <body onload="onLoad()">
     <header>
-        <img width="100"  src="assets/images/gameX-logo.jpg" alt="">
+        <img width="100"  src="" alt="" id="logo">
         <h2 class="brand">gameX</h2>
         <div class="register">
             <a href="signout.html">Sign out</a>
@@ -22,7 +22,14 @@
          <h3>Dashboard</h3>
          <nav>
             <a href="#">Home</a>
-            <a href="#">Change Theme</a>
+            <div class="dropdown">
+                <button class="dropbtn">Change Theme</button>
+                <div class="dropdown-content">
+                  <a id='defaultColor'>Default</a>
+                  <a id='purplePride'>Purple Pride</a>
+                  <a id='pinkBlush'>Pink Blush</a>
+                </div>
+              </div>
          </nav>
     </aside>
     <main class="container">
