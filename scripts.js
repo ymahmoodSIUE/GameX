@@ -1,6 +1,6 @@
 const gameNames = ["<a href='asteroid.html'>Asteroid</a>",
                    "<a href='packman.html'>Packman</a>",
-                   "<a href='spaceinvaders.html'>Space Invaders</a>",
+                   "<a href='spaceinvader.html'>Space Invaders</a>",
                    "<a href='tetris.html'>Tetris</a>"
                   ]
 const generalStats = ["Total time"]
@@ -95,5 +95,26 @@ setHighestScore(newHighestScore) {
 }
 }
 
+//Change theme
+const logoAddress = "assets/images/gameX-logo.jpg"; 
+var logo = document.getElementById('logo'); 
+logo.src = logoAddress; 
 
+function changeTheme(backgroundColor, borderColor, textColor, logoPath) {
+    document.documentElement.style.setProperty('--background-color', backgroundColor);
+    document.documentElement.style.setProperty('--border-color', borderColor);
+    document.documentElement.style.setProperty('--text-color', textColor);
+    logo.src = logoPath; 
+}
 
+defaultColor.addEventListener('click', () => {
+    changeTheme('#ADD8E6', '#000000', '#000000', logoAddress); 
+});
+
+purplePride.addEventListener('click', () => {
+    changeTheme('#E6E6FA', '#CC99FF', '#9933FF', "assets/images/logoPurplePride.jpg"); 
+});
+
+pinkBlush.addEventListener('click', () => {
+    changeTheme('#FFC0CB', '#DB7093', '#C71585', "assets/images/logoPinkBlush.jpg"); 
+});
