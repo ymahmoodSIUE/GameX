@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/cssForGames.css">
+    <title>Tetris</title>
+</head>
+
+<body>
+    <div>
+        <img class="gameImage" src="assets\images\tetris.png">
+    </div>
+    <div class="tooltip-container">
+        <p id="tooltip-text">Press space to play</p>
+        <button id="tooltip-button">Help</button>
+      </div>
+      <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe> <!-- solution 2 I used and Dr. Matta said I was allowed to use it https://stackoverflow.com/questions/50490304/how-to-make-audio-autoplay-on-chrome  --> 
+      <audio id="player" autoplay loop>
+          <source src="audio/tetris.mp3" type="audio/mp3">
+      </audio>
+      <audio autoplay><source src="tetris.mp3"></audio> <!-- tetris sound: https://www.youtube.com/watch?v=NmCCQxVBfyM  -->
+
+   <script src="JSForGames.js"></script>
+</body>
+</html>
