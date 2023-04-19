@@ -1,5 +1,5 @@
 const gameNames = ["<a href='asteroid.html'>Asteroid</a>",
-                   "<a href='packman.html'>Packman</a>",
+                   "<a href='packman.html'>Pacman</a>",
                    "<a href='spaceinvader.html'>Space Invaders</a>",
                    "<a href='tetris.html'>Tetris</a>"
                   ]
