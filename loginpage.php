@@ -4,7 +4,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
   
     if ($username == 'admin' && $password == 'admin') {
-      setcookie('username', $username, time() + (86400 * 365), "/");
       header('Location: main.html');
       exit;
     } else {
