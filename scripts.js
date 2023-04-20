@@ -118,3 +118,26 @@ purplePride.addEventListener('click', () => {
 pinkBlush.addEventListener('click', () => {
     changeTheme('#FFC0CB', '#DB7093', '#C71585', "assets/images/logoPinkBlush.jpg"); 
 });
+
+////Updating game by Milad
+class GameController{
+    updateGames(id,name,totalTimePlayed, numberOfTimesPlayed, avgScore,highestScore,ranking){
+        const gameItem= games.find((item)=>item.id===id)
+        if (ads) {
+            gameItem.name=name;
+            gameItem.totalTimePlayed=totalTimePlayed;
+            gameItem.numberOfTimesPlayed=numberOfTimesPlayed;
+            gameItem.avgScore=avgScore;
+            gameItem.highestScore=highestScore;
+            gameItem.ranking=ranking;
+
+            const games=games.filter((item)=>item.id !==id)
+            games.push(gameItem);
+            return "update successful.";
+
+        }else{
+            return "update failed."
+        }
+
+    }
+}

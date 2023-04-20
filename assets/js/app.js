@@ -160,7 +160,7 @@ const changePasswordForm = document.querySelector(".change-password-form");
 if (changePasswordForm) {
   changePasswordForm.addEventListener("submit", changePassword);
 }
-// #################################################
+// ################### Sprint3  Advertisment##############################
 class Advertisment {
   #companyName;
   #companyPhoneNumber
@@ -179,6 +179,22 @@ class Advertisment {
     this.#banner = banner;
   }
 }
+const adsRequestForm  = document.querySelector(".ads-request-form");
+if (adsRequestForm) {
+  adsRequestForm.addEventListener("submit", addAdvertisement);
+}
+function addAdvertisement(e) {
+  e.preventDefault();
+  const companyNameInput=document.querySelector(".company-name");
+const companyEmailInput=document.querySelector(".company-email")
+const companyPhoneNumber=document.querySelector(".company-phone-number")
+const adsCost= document.querySelector(".ads-cost")
+const startDate = document.querySelector(".start-date")
+const banner= document.querySelector(".banner")
+
+
+}
+
 
 
 
