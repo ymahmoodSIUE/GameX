@@ -18,6 +18,11 @@ Space invader
         <p id="tooltip-text">Press space to play</p>
         <button id="tooltip-button">Help</button>
       </div>
+     <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe> <!-- solution 2 I used and Dr. Matta said I was allowed to use it https://stackoverflow.com/questions/50490304/how-to-make-audio-autoplay-on-chrome  --> 
+      <audio id="player" autoplay loop>
+          <source src="audio/space.mp3" type="audio/mp3">  <!-- space sound: https://www.youtube.com/watch?v=k9oyDTR0EwQ  -->
+      </audio>
+      <audio autoplay><source src="space.mp3"></audio>
 
    <script src="JSForGames.js"></script>
 </body>

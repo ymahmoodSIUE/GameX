@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ads Request Form</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <body style="background-color:#87CEEB"></body>
+    <style> h1{text-align: center;}</style>
+    <style> h2{text-align: center;}</style>
+
+</head>
+<body>
+    <a href="adminpage.html">Back to the admin page</a></button>
+    <div class="form-container">
+        <form class= "form-style" >
+            <h1>AD form review</h1>
+            <h2 class="centered">Please insert the Ad image with the paid amount of time</h2>
+
+
+            <div class="form-group">
+                <label for="">Ad forms submitted: 0</label>
+                <div class="error company-email-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="">Timer for the ad:</label>
+                <select class="ads-cost" type="text" name="ads-cost" > 
+                    <option value="0" selected disabled>Select a option</option>
+                    <option value="">Remove</option>
+                    <option value="">1 Month</option>
+                    <option value="">3 Month</option>
+                    <option value="">6 Month</option>
+                    <option value="">12 Month</option>
+                </select>
+                <div class="error company-email-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="">Start Date:</label>
+                <input class="start-date" type="date" name="start-date" required> 
+                <div class="error start-date-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="">Banner:</label>
+                <input class="banner" type="file" name="banner" required> 
+                <div class="error banner-error"></div>
+            </div>
+
+           
+            <div class="form-group">
+                <a href="adformfiles.html">Review Ad forms</button></a>
+                <div class="error company-email-error"></div>
+            </div>
+            <button type="submit" class="ads-register">Submit</button>
+
+        </form>
+
+    </div>
+    <script src="assets/js/app.js"></script>
+    
+</body>
+
+</html>
