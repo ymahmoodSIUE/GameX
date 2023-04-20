@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Game Form</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="ads-request-form form-style">
+        <h2>Edit Game Form</h2>
+        <div class="form-group">
+          <label for="">Game Name:</label>
+          <input
+            class="game-name"
+            type="text"
+            name="game-name"
+            required
+          />
+          <div class="error game-name-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="">Icon:</label>
+          <input
+            class="Icon"
+            type="file"
+            name="Icon"
+            required
+          />
+          <div class="error Icon"></div>
+        </div>
+        <div class="form-group">
+          <label for="">Daily Time Limit for kids:</label>
+          <input
+            class="time-limit"
+            type="time"
+            name="time-limit"
+            required
+          />
+          <div class="error time-limit-error"></div>
+        </div>
+           
+        <div class="form-group">
+          <label for="">Premium Version redeem code</label>
+          <input type="text" class="premium-version" />
+        </div>
+        
+        <button type="submit" class="update-game">Submit</button>
+      </form>
+    </div>
+    <script src="assets/js/update-game.js"></script>
+  </body>
+</html>

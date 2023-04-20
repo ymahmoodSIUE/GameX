@@ -44,7 +44,7 @@ function printGameSpecificStats() {
     var gameSpecificStatsList = document.getElementById('gameSpecificStatsList');
     var gameSpecificStatsListHTML = "";
     for (let i = 0; i < games.length; i++) {
-        gameSpecificStatsListHTML += "<h4>" + games[i].name + "</h4><ul>"; 
+        gameSpecificStatsListHTML += "<h4>" + games[i].name + "</h4><a class='update-link' href='edit-game.html?id=1'>Update Game</a><ul>"; 
         gameSpecificStatsListHTML += "<li> Total time played: " + games[i].totalTimePlayed + "</li>";
         gameSpecificStatsListHTML += "<li> Number of times played: " + games[i].numberOfTimesPlayed + "</li>";
         gameSpecificStatsListHTML += "<li> Average score: " + games[i].avgScore + "</li>";
@@ -119,25 +119,11 @@ pinkBlush.addEventListener('click', () => {
     changeTheme('#FFC0CB', '#DB7093', '#C71585', "assets/images/logoPinkBlush.jpg"); 
 });
 
-////Updating game by Milad
-class GameController{
-    updateGames(id,name,totalTimePlayed, numberOfTimesPlayed, avgScore,highestScore,ranking){
-        const gameItem= games.find((item)=>item.id===id)
-        if (ads) {
-            gameItem.name=name;
-            gameItem.totalTimePlayed=totalTimePlayed;
-            gameItem.numberOfTimesPlayed=numberOfTimesPlayed;
-            gameItem.avgScore=avgScore;
-            gameItem.highestScore=highestScore;
-            gameItem.ranking=ranking;
-
-            const games=games.filter((item)=>item.id !==id)
-            games.push(gameItem);
-            return "update successful.";
-
-        }else{
-            return "update failed."
-        }
-
-    }
+let params = window.location.search.split("=")[1]
+console.log(params);
+if (params=="successful") {
+    document.querySelector(".message-url").innerHTML="<span>Update Game Successful!</span>"
+}
+if (params=="in-process") {
+    document.querySelector(".message-url").innerHTML="<span>after review we will display your ad</span>"
 }
