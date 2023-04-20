@@ -169,29 +169,72 @@ class Advertisment {
   #startDate;
   #duration;
   #banner;
-  constructor(companyName,companyPhoneNumber,companyEmail, adsCost, startDate, duration, banner) {
+  #title;
+  #text;
+  constructor(companyName, companyPhoneNumber, companyEmail, adsCost, startDate, duration, banner, title, text) {
     this.#companyName = companyName;
-    this.#companyPhoneNumber=companyPhoneNumber;
-    this.#companyEmail=companyEmail;
+    this.#companyPhoneNumber = companyPhoneNumber;
+    this.#companyEmail = companyEmail;
     this.#adsCost = adsCost;
     this.#startDate = startDate;
     this.#duration = duration;
     this.#banner = banner;
+    this.#title = title;
+    this.#text = text;
+
   }
 }
-const adsRequestForm  = document.querySelector(".ads-request-form");
+const adsRequestForm = document.querySelector(".ads-request-form");
 if (adsRequestForm) {
   adsRequestForm.addEventListener("submit", addAdvertisement);
 }
+
+class AdsController {
+   #advertiseList=[];
+  creatAds(companyName, companyPhoneNumber, companyEmail, cost, startDate, duration, banner, title, text) {
+   
+    const advertisement = new Advertisment(companyName, companyPhoneNumber, companyEmail, cost, startDate, duration, banner, title, text)
+  
+    this.#advertiseList.push(addAdvertisement);
+  }
+}
+
+
 function addAdvertisement(e) {
   e.preventDefault();
-  const companyNameInput=document.querySelector(".company-name");
-const companyEmailInput=document.querySelector(".company-email")
-const companyPhoneNumber=document.querySelector(".company-phone-number")
-const adsCost= document.querySelector(".ads-cost")
-const startDate = document.querySelector(".start-date")
-const banner= document.querySelector(".banner")
+  const companyName = document.querySelector(".company-name").value;
+  const companyEmail = document.querySelector(".company-email").value;
+  const companyPhoneNumber = document.querySelector(".company-phone-number").value;
+  const costDuration = document.querySelector(".ads-cost").value;
+  const startDate = document.querySelector(".start-date").value;
+  const banner = document.querySelector(".banner").value;
+  const title = document.querySelector(".title-ads").value;
+  const text = document.querySelector(".text-ads").value;
 
+  const adsCost = costDuration.split("-")
+  const cost = adsCost[0]
+  const duration = adsCost[1]
+
+  const adsCntr=new AdsController();
+  adsCntr.creatAds(companyName, companyPhoneNumber, companyEmail, cost, startDate, duration, banner, title, text)
+
+  const advertisementItem = `
+              <h3 class="title-advertise">${companyName}</h3>
+              <h4>${title}</h4>
+               <p class="text-advertise">${text}</p>
+               
+                <div>
+                    <b>Email:</b>
+                    <span class="email-adveritse">${companyEmail}</span>
+                </div>
+                <div>
+                    <h3>Phone:</h3>
+                    <span class="phone-adveritse">${companyPhoneNumber}</span>
+                </div>
+`
+
+  // document.querySelector(".ads-list").innerHTML += advertisementItem
+  window.location.href = "main.html";
 
 }
 
