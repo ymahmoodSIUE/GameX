@@ -108,7 +108,7 @@ function resetPassword(e) {
          <h1 class="success">
             Your Password changed successfully.
          </h1>
-         <a href="index.html">Back To Dashboard</a>
+         <a href="main.html">Back To Dashboard</a>
      </div>
     `;
 }
@@ -143,7 +143,7 @@ function changePassword(e) {
          <h1 class="success">
             Your Password changed successfully.
          </h1>
-         <a href="index.html">Back To Dashboard</a>
+         <a href="main.html">Back To Dashboard</a>
      </div>
     `;
 }
