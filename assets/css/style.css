@@ -159,3 +159,17 @@ padding: 40px;
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: var(--border-color);}
+
+.message-url{
+  background-color: rgb(0, 128, 60);
+  color: white;
+  text-align: center;
+}
+.message-url span{
+  display: inline-block;
+  padding: 20px;
+}
+.update-link{
+  color: blue!important;
+  text-decoration: underline;
+}
