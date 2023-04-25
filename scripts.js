@@ -44,7 +44,7 @@ function printGameSpecificStats() {
     var gameSpecificStatsList = document.getElementById('gameSpecificStatsList');
     var gameSpecificStatsListHTML = "";
     for (let i = 0; i < games.length; i++) {
-        gameSpecificStatsListHTML += "<h4>" + games[i].name + "</h4><ul>"; 
+        gameSpecificStatsListHTML += "<h4>" + games[i].name + "</h4><a class='update-link' href='edit-game.html?id=1'>Update Game</a><ul>"; 
         gameSpecificStatsListHTML += "<li> Total time played: " + games[i].totalTimePlayed + "</li>";
         gameSpecificStatsListHTML += "<li> Number of times played: " + games[i].numberOfTimesPlayed + "</li>";
         gameSpecificStatsListHTML += "<li> Average score: " + games[i].avgScore + "</li>";
@@ -118,3 +118,4 @@ purplePride.addEventListener('click', () => {
 pinkBlush.addEventListener('click', () => {
     changeTheme('#FFC0CB', '#DB7093', '#C71585', "assets/images/logoPinkBlush.jpg"); 
 });
+
