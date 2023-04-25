@@ -17,7 +17,8 @@
         <button id="tooltip-button">Help</button>
       </div>
     <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe> <!-- solution 2 I used and Dr. Matta said I was allowed to use it https://stackoverflow.com/questions/50490304/how-to-make-audio-autoplay-on-chrome  --> 
-      <audio id="player" autoplay loop>
+    <button onclick="toggleMuted()">Mute|Unmute</button>  
+    <audio id="player" autoplay loop>
           <source src="audio/tetris.mp3" type="audio/mp3">
       </audio>
       <audio autoplay><source src="tetris.mp3"></audio> <!-- tetris sound: https://www.youtube.com/watch?v=NmCCQxVBfyM  -->

@@ -1,5 +1,8 @@
 window.onload=function(){
-
+    function toggleMuted() {
+        var sound = document.getElementById('player');
+        sound.muted = !sound.muted;
+      }
     // selecting the elements for which we want to add a tooltip
     const target = document.getElementById("tooltip-button");
     const tooltip = document.getElementById("tooltip-text");

@@ -1,5 +1,5 @@
 const gameNames = ["<a href='asteroid.html'>Asteroid</a>",
-                   "<a href='packman.html'>Packman</a>",
+                   "<a href='packman.html'>Pacman</a>",
                    "<a href='spaceinvader.html'>Space Invaders</a>",
                    "<a href='tetris.html'>Tetris</a>"
                   ]
@@ -119,11 +119,3 @@ pinkBlush.addEventListener('click', () => {
     changeTheme('#FFC0CB', '#DB7093', '#C71585', "assets/images/logoPinkBlush.jpg"); 
 });
 
-let params = window.location.search.split("=")[1]
-console.log(params);
-if (params=="successful") {
-    document.querySelector(".message-url").innerHTML="<span>Update Game Successful!</span>"
-}
-if (params=="in-process") {
-    document.querySelector(".message-url").innerHTML="<span>after review we will display your ad</span>"
-}
